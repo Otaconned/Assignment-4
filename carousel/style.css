@@ -125,3 +125,7 @@ header h1 {
 .nav-item.active{
     opacity:0.7;
 }
+
+.nav-item:hover{
+    cursor: pointer;
+}
