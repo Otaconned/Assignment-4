@@ -50,6 +50,21 @@ function swipeRight(e){
     navItems[nextIndex].classList.add('active');
     currentCarouselItem.classList.remove('active');
     navItems[currentIndex].classList.remove('active');
-
 }
 
+navItems.forEach((navItem, index) => {
+    navItem.addEventListener('click', () => {
+        const currentCarouselItem = document.querySelector('.carousel-item.active');
+		const currentNavItem = document.querySelector('.nav-item.active');
+
+        if (navItem === currentNavItem){
+            return;
+        }
+
+        currentCarouselItem.classList.remove('active');
+        currentNavItem.classList.remove('active');
+
+        carouselItems[index].classList.add('active');
+        navItem.classList.add('active');
+    });
+});
