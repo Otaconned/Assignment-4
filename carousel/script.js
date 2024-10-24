@@ -55,7 +55,7 @@ function swipeRight(e){
 navItems.forEach((navItem, index) => {
     navItem.addEventListener('click', () => {
         const currentCarouselItem = document.querySelector('.carousel-item.active');
-		const currentNavItem = document.querySelector('.nav-item.active');
+	const currentNavItem = document.querySelector('.nav-item.active');
 
         if (navItem === currentNavItem){
             return;
